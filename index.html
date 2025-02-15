@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>نموذج تسجيل - Dark Code Academy</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: right; }
+        form { width: 50%; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        label, input, select { display: block; width: 100%; margin-bottom: 10px; }
+        input[type="file"] { border: 1px solid #ccc; padding: 5px; }
+        button { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">نموذج تسجيل - Dark Code Academy</h2>
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">رقم التليفون:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="attendance">طريقة الحضور:</label>
+        <select id="attendance" name="attendance">
+            <option value="offline">أوفلاين</option>
+            <option value="online">أونلاين</option>
+        </select>
+        
+        <label for="course">نوع الكورس:</label>
+        <select id="course" name="course">
+            <option value="cpp">Fundamentals with C++ - 3000 جنيه</option>
+            <option value="angular">Front-end with Angular - 4000 جنيه</option>
+            <option value="aspnet">Back-end with ASP.NET - 4000 جنيه</option>
+        </select>
+        
+        <label for="payment">طريقة الدفع:</label>
+        <select id="payment" name="payment">
+            <option value="vodafone">Vodafone Cash - 01044145136</option>
+            <option value="etisalat">Etisalat Cash - 01147620726</option>
+        </select>
+        
+        <label for="receipt">رفع صورة الدفع:</label>
+        <input type="file" id="receipt" name="receipt" required>
+        
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>
